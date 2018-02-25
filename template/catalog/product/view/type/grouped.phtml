@@ -1,0 +1,11 @@
+<td>
+  <?
+    $qtyStock = Mage::getModel('cataloginventory/stockitem')->loadByProduct($_item)->getQty();
+      if($qtyStock <24){ ?>
+      Only Left
+      <br/>
+      <?
+        echo $qtyStock;
+        }
+    ?>
+   </td>
